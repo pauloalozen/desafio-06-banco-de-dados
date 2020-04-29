@@ -18,7 +18,7 @@ class Transaction {
   @Column()
   title: string;
 
-  @Column()
+  @Column('decimal')
   value: number;
 
   @Column({
@@ -27,12 +27,12 @@ class Transaction {
   })
   type: 'income' | 'outcome';
 
-  @Column()
-  category_id: number;
-
   @ManyToOne(() => Category)
   @JoinColumn({ name: 'category_id' })
   category: Category;
+
+  @Column()
+  category_id: number;
 
   @CreateDateColumn()
   created_at: Date;
