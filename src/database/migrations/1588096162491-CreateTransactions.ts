@@ -26,7 +26,7 @@ export default class CreateTransactions1587851094936
           },
           {
             name: 'type',
-            type: 'enum',
+            type: 'varchar',
           },
           {
             name: 'created_at',
@@ -44,7 +44,6 @@ export default class CreateTransactions1587851094936
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropForeignKey('transactions', 'TransactionCategorie');
     await queryRunner.dropTable('transactions');
   }
 }

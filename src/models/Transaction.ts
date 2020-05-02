@@ -32,7 +32,7 @@ class Transaction {
   category: Category;
 
   @Column()
-  category_id: number;
+  category_id: string;
 
   @CreateDateColumn()
   created_at: Date;

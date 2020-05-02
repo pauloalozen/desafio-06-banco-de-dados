@@ -8,8 +8,8 @@ import {
 
 @Entity('categories')
 class Category {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
   @Column()
   title: string;
